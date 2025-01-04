@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-light: #D4EBF8;
+  --primary: #1F509A;
+  --primary-dark: #0A3981;
+  --accent: #E38E49;
+  --text-dark: #0A3981;
+  --text-light: #D4EBF8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+body {
+  color: var(--text-dark);
+  background-color: var(--primary-light);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.section-animation {
+  animation: fadeIn 1s ease-out;
+}
+
+.card-animation {
+  animation: slideIn 0.5s ease-out;
+}
+
+.typing-animation {
+  overflow: hidden;
+  border-right: .15em solid var(--primary-dark);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-dark); }
+}
+

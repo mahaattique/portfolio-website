@@ -1,5 +1,6 @@
 import React from 'react';
-import './Skills.css';
+import '../styles/Skills.css';
+
 
 const skills = [
   { name: 'JavaScript', level: 90 },

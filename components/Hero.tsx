@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
 
 export default function Hero() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio-website' : '';
+
   return (
     <section className="bg-primary-light text-text-dark py-32">
       <div className="container mx-auto px-4 text-center">
@@ -20,14 +22,13 @@ export default function Hero() {
         </div>
         <div className="space-x-4">
           <Link 
-            href="#projects" 
-            as={`${process.env.NODE_ENV === 'production' ? '/portfolio-website' : ''}/#projects`}
+            href={`${basePath}/#projects`} 
             className="bg-accent hover:bg-accent/80 text-text-dark font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
           >
             View My Work
           </Link>
           <a 
-            href="/path-to-your-resume.pdf" 
+            href={`${basePath}/path-to-your-resume.pdf`}
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-accent hover:bg-accent/80 text-text-dark font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105"

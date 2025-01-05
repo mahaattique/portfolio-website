@@ -3,6 +3,8 @@
 import { useState } from 'react'
 
 export default function Contact() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio-website' : '';
+
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')

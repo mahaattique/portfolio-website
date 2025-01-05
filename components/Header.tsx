@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
 
 export default function Header() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio-website' : '';
+
   return (
     <header className="bg-text-dark text-primary-light sticky top-0 z-10 shadow-md">
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -11,8 +13,8 @@ export default function Header() {
             {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
               <li key={item}>
                 <Link 
-                  href={`#${item.toLowerCase()}`} 
-                  as={`${process.env.NODE_ENV === 'production' ? '/portfolio-website' : ''}/#${item.toLowerCase()}`}
+                   href={`${basePath}/#${item.toLowerCase()}`}
+                  
                   className="text-primary-light hover:text-accent transition duration-300 ease-in-out"
                 >
                   {item}

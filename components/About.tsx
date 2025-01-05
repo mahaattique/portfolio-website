@@ -1,4 +1,6 @@
 export default function About() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio-website' : '';
+
   return (
     <section id="about" className="py-20 bg-primary-light section-animation">
       <div className="container mx-auto px-4">

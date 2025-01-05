@@ -1,21 +1,46 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-const projects = [
-  { title: "Project 1", description: "An innovative web application leveraging cutting-edge technologies to solve complex problems.", image: "/placeholder.svg" },
-  { title: "Project 2", description: "A mobile-first design that prioritizes user experience and performance across all devices.", image: "/placeholder.svg" }
-]
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+}
 
-export default function Projects() {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio-website' : '';
+const projects: Project[] = [
+  { 
+    title: "Project 1", 
+    description: "An innovative web application leveraging cutting-edge technologies to solve complex problems.", 
+    image: "/placeholder.svg" 
+  },
+  { 
+    title: "Project 2", 
+    description: "A mobile-first design that prioritizes user experience and performance across all devices.", 
+    image: "/placeholder.svg" 
+  }
+];
 
+interface ProjectsProps {
+  basePath: string;
+}
+
+export default function Projects({ basePath }: ProjectsProps) {
   return (
     <section id="projects" className="py-20 bg-primary-light section-animation">
       <div className="container mx-auto px-4">
+        {/* Section Title */}
         <h2 className="text-4xl font-bold mb-12 text-center text-primary-dark typing-animation">My Projects</h2>
+
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <div key={index} className="bg-accent rounded-lg shadow-lg overflow-hidden card-animation">
-              <Image src={project.image} alt={project.title} width={500} height={300} className="w-full h-56 object-cover" />
+              <Image 
+                src={`${basePath}${project.image}`} 
+                alt={project.title} 
+                width={500} 
+                height={300} 
+                className="w-full h-56 object-cover" 
+              />
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-3 text-primary">{project.title}</h3>
                 <p className="text-text-dark">{project.description}</p>
@@ -28,6 +53,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --primary-light: #D4EBF8;
-  --primary: #1F509A;
-  --primary-dark: #0A3981;
-  --accent: #E38E49;
-  --text-dark: #0A3981;
-  --text-light: #D4EBF8;
+  --primary-light: #D4EBF8; /* Light blue background */
+  --primary: #1F509A; /* Medium blue primary color */
+  --primary-dark: #0A3981; /* Dark blue for text and borders */
+  --accent: #E38E49; /* Orange accent for buttons and links */
+  --text-dark: #0A3981; /* Dark text color */
+  --text-light: #D4EBF8; /* Light text color */
 }
 
 @keyframes fadeIn {
@@ -22,8 +22,13 @@
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-dark); }
 }
 
 body {
@@ -42,17 +47,11 @@ body {
 
 .typing-animation {
   overflow: hidden;
-  border-right: .15em solid var(--primary-dark);
+  border-right: 0.15em solid var(--primary-dark);
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   animation: 
     typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    blink-caret 0.75s step-end infinite;
 }
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--primary-dark); }
-}
-

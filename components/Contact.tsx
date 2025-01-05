@@ -1,38 +1,40 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
+import { useState } from 'react';
 
-export default function Contact() {
-  // const basePath = process.env.NODE_ENV === 'production' ? '/portfolio-website' : '';
+interface ContactProps {
+  basePath: string;
+}
 
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitMessage, setSubmitMessage] = useState('')
+export default function Contact({ basePath }: ContactProps) {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(`${basePath}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
-      })
+      });
       if (response.ok) {
-        setSubmitMessage('Message sent successfully!')
-        setFormData({ name: '', email: '', message: '' })
+        setSubmitMessage('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
       } else {
-        setSubmitMessage('Failed to send message. Please try again.')
+        setSubmitMessage('Failed to send message. Please try again.');
       }
     } catch (error) {
-      setSubmitMessage('An error occurred. Please try again later.')
+      setSubmitMessage('An error occurred. Please try again later.');
     }
-    setIsSubmitting(false)
-  }
+    setIsSubmitting(false);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   return (
     <section id="contact" className="py-20 bg-primary-light section-animation">
@@ -91,6 +93,5 @@ export default function Contact() {
         </form>
       </div>
     </section>
-  )
+  );
 }
-

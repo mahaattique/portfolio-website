@@ -1,53 +1,7 @@
-// {
-//   "compilerOptions": {
-//     "lib": [
-//       "dom",
-//       "dom.iterable",
-//       "esnext"
-//     ],
-//     "allowJs": true,
-//     "target": "ES6",
-//     "skipLibCheck": true,
-//     "strict": true,
-//     "noEmit": true,
-//     "esModuleInterop": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "module": "esnext",
-//     "moduleResolution": "node16",
-//     "resolveJsonModule": true,
-//     "isolatedModules": true,
-//     "jsx": "preserve",
-//     "incremental": true,
-//     "plugins": [
-//       {
-//         "name": "next"
-//       }
-//     ],
-//     "paths": {
-//       "@/*": [
-//         "./*"
-//       ]
-//     },
-//     // "resolveJsonModule": true
-//   },
-//   "include": [
-//     "next-env.d.ts",
-//     "**/*.ts",
-//     "**/*.tsx",
-//     ".next/types/**/*.ts"
-//   ],
-//   "exclude": [
-//     "node_modules"
-//   ]
-// }
 {
   "compilerOptions": {
     "target": "ES6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -55,21 +9,20 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
     "baseUrl": ".",
-    "types": ["next", "next/image-types", "next/navigation", "tailwindcss"],
+    "types": ["next", "next/image-types", "next/navigation", "tailwindcss", "react"],
     "paths": {
-    "@/*": ["./*"],
-    "components/*": ["components/*"],
+      "@/*": ["./*"],
+      "components/*": ["components/*"],
       "utils/*": ["lib/utils/*"],
       "ui/*": ["components/ui/*"],
       "lib/*": ["lib/*"],
-      "hooks/*": ["hooks/*"]},
+      "hooks/*": ["hooks/*"]
+    },
     "incremental": true,
     "plugins": [
       {
@@ -81,8 +34,8 @@
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
-    "types/**/*.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "types/**/*.d.ts"
   ],
   "exclude": [
     // "node_modules"

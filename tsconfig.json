@@ -64,7 +64,12 @@
     "baseUrl": ".",
     "types": ["next", "next/image-types", "next/navigation", "tailwindcss"],
     "paths": {
-    "@/*": ["./*"]},
+    "@/*": ["./*"],
+    "components/*": ["components/*"],
+      "utils/*": ["lib/utils/*"],
+      "ui/*": ["components/ui/*"],
+      "lib/*": ["lib/*"],
+      "hooks/*": ["hooks/*"]},
     "incremental": true,
     "plugins": [
       {

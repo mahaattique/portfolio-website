@@ -1,0 +1,64 @@
+/* Hero styles */
+.hero {
+  background-color: var(--primary-light); /* Light blue background */
+  color: var(--text-dark); /* Dark text color */
+  padding: 8rem 0; /* Equivalent to py-32 */
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Equivalent to px-4 */
+}
+
+.hero-title {
+  font-size: 3rem; /* Equivalent to text-5xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  margin-bottom: 1rem; /* Equivalent to mb-4 */
+  animation: fadeIn 1s ease-out; /* Custom animation */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  margin-bottom: 1rem; /* Equivalent to mb-4 */
+  animation: slideIn 0.5s ease-out; /* Custom animation */
+}
+
+.hero-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Equivalent to space-x-4 */
+  margin-bottom: 2rem; /* Equivalent to mb-8 */
+}
+
+.icon {
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  color: var(--text-dark); /* Default icon color */
+  transition: color 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.icon:hover {
+  color: var(--accent); /* Orange accent on hover */
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Equivalent to space-x-4 */
+}
+
+.btn {
+  background-color: var(--accent); /* Orange background */
+  color: var(--text-dark); /* Dark text color */
+  font-weight: bold; /* Equivalent to font-bold */
+  padding: 0.75rem 1.5rem; /* Equivalent to py-3 px-6 */
+  border-radius: 999px; /* Equivalent to rounded-full */
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: rgba(227, 142, 73, 0.8); /* Slightly transparent orange on hover */
+  transform: scale(1.05); /* Slightly larger on hover */
+}

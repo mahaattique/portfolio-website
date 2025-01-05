@@ -1,0 +1,121 @@
+/* CSS Variables */
+:root {
+  --primary-light: #D4EBF8; /* Light blue background */
+  --primary: #1F509A; /* Medium blue primary color */
+  --primary-dark: #0A3981; /* Dark blue for text and borders */
+  --accent: #E38E49; /* Orange accent for buttons and links */
+  --text-dark: #0A3981; /* Dark text color */
+  --text-light: #D4EBF8; /* Light text color */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-dark);
+  }
+}
+
+/* Global Styles */
+body {
+  color: var(--text-dark);
+  background-color: var(--primary-light);
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utility Classes */
+.section-animation {
+  animation: fadeIn 1s ease-out;
+}
+
+.card-animation {
+  animation: slideIn 0.5s ease-out;
+}
+
+.typing-animation {
+  overflow: hidden;
+  border-right: 0.15em solid var(--primary-dark);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Button Styles */
+button {
+  background-color: var(--accent);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #cf7b3b;
+}
+
+/* Link Styles */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #cf7b3b;
+}
+
+/* Container Styling */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Flexbox Utility */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

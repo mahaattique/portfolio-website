@@ -1,0 +1,64 @@
+/* Skills Section */
+.skills-section {
+  background-color: var(--primary-light); /* Light blue background */
+  padding: 5rem 0; /* Equivalent to py-20 */
+  animation: fadeIn 1s ease-out; /* Section animation */
+}
+
+.skills-container {
+  max-width: 768px; /* Equivalent to max-w-3xl */
+  margin: 0 auto;
+  padding: 0 1rem; /* Equivalent to px-4 */
+}
+
+.skills-title {
+  font-size: 2.5rem; /* Equivalent to text-4xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  margin-bottom: 3rem; /* Equivalent to mb-12 */
+  text-align: center;
+  color: var(--primary-dark); /* Dark blue for text */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Equivalent to margin-bottom for each skill item */
+}
+
+.skill-item {
+  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+}
+
+.skill-name {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: var(--text-dark); /* Dark text color */
+}
+
+.skill-level {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  font-weight: 600; /* Equivalent to font-semibold */
+  color: var(--primary); /* Medium blue text */
+}
+
+.skill-bar-background {
+  width: 100%;
+  height: 0.625rem; /* Equivalent to h-2.5 */
+  background-color: var(--accent); /* Orange background */
+  border-radius: 0.5rem; /* Equivalent to rounded-full */
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%; /* Full height of the bar */
+  background-color: var(--primary); /* Medium blue foreground */
+  border-radius: 0.5rem; /* Equivalent to rounded-full */
+  transition: width 0.5s ease-out; /* Smooth width transition */
+}

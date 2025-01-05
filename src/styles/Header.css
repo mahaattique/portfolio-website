@@ -1,0 +1,52 @@
+/* Header styles */
+.header {
+  background-color: var(--text-dark); /* Dark background */
+  color: var(--primary-light); /* Light text color */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow equivalent to shadow-md */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px; /* Equivalent to px-4 py-6 */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
+}
+
+.branding {
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* Equivalent to space-x-6 */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px; /* Equivalent to space-x-4 */
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--primary-light); /* Light text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.nav-link:hover {
+  color: var(--accent); /* Orange accent on hover */
+}

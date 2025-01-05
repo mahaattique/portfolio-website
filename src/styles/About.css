@@ -1,0 +1,37 @@
+/* About Section Styles */
+.about-section {
+  padding: 80px 0; /* Equivalent to py-20 */
+  background-color: var(--primary-light); /* Light blue background */
+  animation: fadeIn 1s ease-out; /* Section animation */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-heading {
+  font-size: 2.5rem; /* Equivalent to text-4xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  margin-bottom: 2rem; /* Equivalent to mb-8 */
+  text-align: center;
+  color: var(--primary); /* Medium blue */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; /* Typing animation */
+}
+
+.about-content {
+  max-width: 768px; /* Equivalent to max-w-3xl */
+  margin: 0 auto;
+  background-color: var(--primary); /* Medium blue background */
+  padding: 2rem; /* Equivalent to p-8 */
+  border-radius: 8px; /* Equivalent to rounded-lg */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Equivalent to shadow-lg */
+}
+
+.about-text {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+  color: var(--text-light); /* Light text color */
+  line-height: 1.75; /* Equivalent to leading-relaxed */
+}

@@ -1,0 +1,74 @@
+/* Projects styles */
+.projects-section {
+  background-color: var(--primary-light); /* Light blue background */
+  padding: 5rem 0; /* Equivalent to py-20 */
+  animation: fadeIn 1s ease-out; /* Section animation */
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Equivalent to px-4 */
+}
+
+.projects-title {
+  font-size: 2.5rem; /* Equivalent to text-4xl */
+  font-weight: bold; /* Equivalent to font-bold */
+  margin-bottom: 3rem; /* Equivalent to mb-12 */
+  text-align: center;
+  color: var(--primary-dark); /* Dark blue for text */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 3rem; /* Equivalent to gap-12 */
+}
+
+.project-card {
+  background-color: var(--accent); /* Orange background for cards */
+  border-radius: 0.5rem; /* Equivalent to rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  overflow: hidden; /* Ensure no content overflows */
+  animation: slideIn 0.5s ease-out; /* Card animation */
+}
+
+.project-image {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensure image fits nicely */
+}
+
+.project-content {
+  padding: 1.5rem; /* Equivalent to p-6 */
+}
+
+.project-title {
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  font-weight: 600; /* Equivalent to font-semibold */
+  margin-bottom: 1rem; /* Equivalent to mb-3 */
+  color: var(--primary); /* Medium blue for text */
+}
+
+.project-description {
+  color: var(--text-dark); /* Dark text */
+  margin-bottom: 1rem; /* Add some space */
+}
+
+.project-button {
+  margin-top: 1rem; /* Equivalent to mt-4 */
+  padding: 0.5rem 1rem; /* Equivalent to py-2 px-4 */
+  font-weight: bold; /* Equivalent to font-bold */
+  color: var(--text-light); /* Light text color */
+  background-color: var(--primary); /* Medium blue background */
+  border: none;
+  border-radius: 0.25rem; /* Equivalent to rounded */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.project-button:hover {
+  background-color: rgba(31, 80, 154, 0.8); /* Slightly transparent blue on hover */
+  transform: scale(1.05); /* Grow slightly on hover */
+}

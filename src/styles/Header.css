@@ -1,40 +1,39 @@
 /* Header styles */
 .header {
-  background-color: var(--text-dark); /* Dark background */
-  color: var(--primary-light); /* Light text color */
   position: sticky;
   top: 0;
+  right: 0;
+  width: auto; /* Only take up as much width as necessary */
+  height: 100%; /* Full height for vertical alignment */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   z-index: 10;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow equivalent to shadow-md */
+  background-color: transparent; /* Transparent background */
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Vertical alignment */
   align-items: center;
-  padding: 24px 16px; /* Equivalent to px-4 py-6 */
-  max-width: 1200px;
-  margin: 0 auto; /* Center the content */
-}
-
-.branding {
-  font-size: 1.5rem; /* Equivalent to text-2xl */
-  font-weight: bold; /* Equivalent to font-bold */
-  margin: 0;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 24px; /* Equivalent to space-x-6 */
+  gap: 16px;
+  position: fixed; /* Keep it fixed on the screen */
+  top: 50%; /* Center the nav vertically */
+  right: 10px; /* Adjust this value to control distance from the edge */
+  transform: translateY(-50%); /* Center properly */
+  background-color: var(--text-dark); /* Dark background for visibility */
+  padding: 16px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for elevation */
 }
 
 .nav-list {
   display: flex;
+  flex-direction: column; /* Stack the nav items vertically */
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 16px; /* Equivalent to space-x-4 */
+  gap: 12px; /* Space between each nav item */
 }
 
 .nav-item {
@@ -44,9 +43,12 @@
 .nav-link {
   color: var(--primary-light); /* Light text color */
   text-decoration: none;
-  transition: color 0.3s ease-in-out; /* Smooth hover transition */
+  padding: 10px 15px;
+  border-radius: 5px; /* Add some rounding to make the buttons look nice */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--accent); /* Orange accent on hover */
+  background-color: var(--accent); /* Highlight on hover */
+  color: var(--text-dark); /* Contrast text color on hover */
 }

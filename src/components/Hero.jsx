@@ -1,15 +1,29 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import '../styles/Hero.css';
-
+// import WaveIcon from '../assets/wave-icon.svg'; // Add your neutral-toned wave SVG
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-container">
+        {/* Waving Hand */}
+        {/* <div className="waving-hand">
+          <img
+            src={WaveIcon}
+            alt="Waving hand"
+            className="wave-icon"
+            aria-hidden="true"
+          />
+        </div> */}
+
         {/* Hero Title */}
         <h2 className="hero-title">Hello, I'm Maha!</h2>
-        <p className="hero-subtitle">A Professional Developer</p>
+
+        {/* Subtitle */}
+        <div className="hero-box">
+          <p className="hero-subtitle">A Professional Developer</p>
+        </div>
 
         {/* Social Links */}
         <div className="hero-social-links">

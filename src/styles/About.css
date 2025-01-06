@@ -1,8 +1,8 @@
 /* About Section Styles */
 .about-section {
-  padding: 80px 0; /* Equivalent to py-20 */
-  background-color: var(--primary-light); /* Light blue background */
-  animation: fadeIn 1s ease-out; /* Section animation */
+  padding: 80px 0;
+  background-color: var(--primary-light);
+  animation: fadeIn 1s ease-out;
 }
 
 .container {
@@ -12,26 +12,116 @@
   padding: 0 15px;
 }
 
+/* Typing Heading */
 .about-heading {
-  font-size: 2.5rem; /* Equivalent to text-4xl */
-  font-weight: bold; /* Equivalent to font-bold */
-  margin-bottom: 2rem; /* Equivalent to mb-8 */
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-right: 0.15em solid var(--text-dark);
+  white-space: nowrap;
+  letter-spacing: 0.15em;
   text-align: center;
-  color: var(--primary); /* Medium blue */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; /* Typing animation */
-}
-
-.about-content {
-  max-width: 768px; /* Equivalent to max-w-3xl */
+  max-width: 800px;
   margin: 0 auto;
-  background-color: var(--primary); /* Medium blue background */
-  padding: 2rem; /* Equivalent to p-8 */
-  border-radius: 8px; /* Equivalent to rounded-lg */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Equivalent to shadow-lg */
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
-.about-text {
-  font-size: 1.125rem; /* Equivalent to text-lg */
-  color: var(--text-light); /* Light text color */
-  line-height: 1.75; /* Equivalent to leading-relaxed */
+.about-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 4rem; /* Increase spacing below subtitle */
+  color: var(--primary-dark);
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Mind map bubbles */
+.mind-map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px; /* Additional margin above bubbles */
+}
+
+.bubble {
+  background-color: #d4a373; /* Sandy brown color */
+  color: var(--primary-dark); /* Dark text for contrast */
+  padding: 20px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  border: 2px dashed #5e503f; /* Hand-drawn pencil-like border */
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bubble.active {
+  transform: scale(1.5);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1; /* Ensure expanded bubble is above others */
+}
+
+.bubble-title {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.bubble-detail {
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.5;
+  display: none;
+}
+
+.bubble.active .bubble-detail {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-dark);
+  }
+}
+
+/* Fade-in effect for details */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

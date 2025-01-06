@@ -1,11 +1,11 @@
 /* CSS Variables */
 :root {
-  --primary-light: #D4EBF8; /* Light blue background */
-  --primary: #1F509A; /* Medium blue primary color */
-  --primary-dark: #0A3981; /* Dark blue for text and borders */
-  --accent: #E38E49; /* Orange accent for buttons and links */
-  --text-dark: #0A3981; /* Dark text color */
-  --text-light: #D4EBF8; /* Light text color */
+  --primary-light: #f4f0e4; /* Light earthy beige background */
+  --primary: #4f4a41; /* Medium warm grey for primary text */
+  --primary-dark: #2e2a25; /* Dark earthy brown for text and borders */
+  --accent: #c57c33; /* Warm orange accent for buttons and links */
+  --text-dark: #2e2a25; /* Dark text color */
+  --text-light: #f4f0e4; /* Light text color */
 }
 
 /* Keyframes for animations */
@@ -49,13 +49,51 @@
 }
 
 /* Global Styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--text-dark);
   background-color: var(--primary-light);
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
+  height: 100%;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 20px; /* Add consistent padding for sections */
+  box-sizing: border-box;
+}
+section:first-of-type {
+  margin-top: 0; /* Ensure no margin above the first section */
+  padding-top: 0; /* Remove top padding if necessary */
+}
+
+/* Header & Section Titles */
+h1, h2, h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 /* Utility Classes */
@@ -87,11 +125,12 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #cf7b3b;
+  background-color: #b66b2d;
+  transform: translateY(-2px);
 }
 
 /* Link Styles */
@@ -102,7 +141,7 @@ a {
 }
 
 a:hover {
-  color: #cf7b3b;
+  color: #b66b2d;
 }
 
 /* Container Styling */
@@ -118,4 +157,53 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Shadows */
+.shadow-sm {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-md {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Border Radius */
+.rounded {
+  border-radius: 8px;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+/* Transitions */
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Background Highlights */
+.bg-highlight {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Scrollbar (Minimalist style) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }

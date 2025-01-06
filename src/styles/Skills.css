@@ -1,64 +1,115 @@
 /* Skills Section */
 .skills-section {
-  background-color: var(--primary-light); /* Light blue background */
-  padding: 5rem 0; /* Equivalent to py-20 */
-  animation: fadeIn 1s ease-out; /* Section animation */
+  background-color: var(--primary-light); /* Light beige background */
+  padding: 5rem 0; /* Section padding */
+  animation: fadeIn 1s ease-out; /* Fade-in animation */
 }
 
 .skills-container {
-  max-width: 768px; /* Equivalent to max-w-3xl */
+  max-width: 768px; /* Center-aligned */
   margin: 0 auto;
-  padding: 0 1rem; /* Equivalent to px-4 */
+  padding: 0 1rem; /* Horizontal padding */
 }
 
+/* Typing Title */
 .skills-title {
-  font-size: 2.5rem; /* Equivalent to text-4xl */
-  font-weight: bold; /* Equivalent to font-bold */
-  margin-bottom: 3rem; /* Equivalent to mb-12 */
+  font-size: 3rem; /* Large text */
+  font-weight: bold; /* Bold */
+  margin-bottom: 1rem; /* Space below title */
+  overflow: hidden;
+  border-right: 0.15em solid var(--text-dark); /* Typing cursor effect */
+  white-space: nowrap;
+  letter-spacing: 0.15em;
   text-align: center;
-  color: var(--primary-dark); /* Dark blue for text */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
+.skills-subtitle {
+  text-align: center;
+  font-size: 1.2rem; /* Smaller text for subtitle */
+  margin-bottom: 3rem;
+  color: var(--primary-dark); /* Darker text */
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Skills List */
 .skills-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Equivalent to margin-bottom for each skill item */
+  gap: 2rem; /* Space between skill items */
 }
 
 .skill-item {
-  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+  background-color: #ede8d9; /* Slightly darker background for box */
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .skill-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  margin-bottom: 0.5rem;
 }
 
 .skill-name {
-  font-size: 1.125rem; /* Equivalent to text-lg */
-  font-weight: 600; /* Equivalent to font-semibold */
-  color: var(--text-dark); /* Dark text color */
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-dark); /* Darker text */
 }
 
 .skill-level {
-  font-size: 1.125rem; /* Equivalent to text-lg */
-  font-weight: 600; /* Equivalent to font-semibold */
-  color: var(--primary); /* Medium blue text */
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary); /* Medium blue */
 }
 
 .skill-bar-background {
   width: 100%;
-  height: 0.625rem; /* Equivalent to h-2.5 */
-  background-color: var(--accent); /* Orange background */
-  border-radius: 0.5rem; /* Equivalent to rounded-full */
+  height: 0.625rem; /* Bar height */
+  background-color: var(--accent); /* Orange background for bar */
+  border-radius: 0.5rem;
+  border: none; /* Remove additional border to match original colors */
   overflow: hidden;
 }
 
 .skill-bar {
-  height: 100%; /* Full height of the bar */
+  height: 100%;
   background-color: var(--primary); /* Medium blue foreground */
-  border-radius: 0.5rem; /* Equivalent to rounded-full */
+  border-radius: 0.5rem;
   transition: width 0.5s ease-out; /* Smooth width transition */
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-dark);
+  }
+}
+
+/* Fade-in effect for subtitle */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

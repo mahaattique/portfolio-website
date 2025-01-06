@@ -1,8 +1,8 @@
-/* contact.css */
+/* Contact Section */
 .contact-section {
-  padding: 80px 0; /* Equivalent to py-20 */
-  background-color: var(--primary-light); /* Light blue background */
-  animation: fadeIn 1s ease-out; /* Use global animation */
+  padding: 80px 0;
+  background-color: var(--primary-light); /* Light beige background */
+  animation: fadeIn 1s ease-out;
 }
 
 .container {
@@ -11,81 +11,120 @@
   margin: 0 auto;
 }
 
+/* Typing Heading */
 .contact-heading {
-  font-size: 2.5rem; /* Equivalent to text-4xl */
-  font-weight: bold; /* Equivalent to font-bold */
-  margin-bottom: 3rem; /* Equivalent to mb-12 */
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-right: 0.15em solid var(--text-dark); /* Typing cursor effect */
+  white-space: nowrap;
+  letter-spacing: 0.15em;
   text-align: center;
-  color: var(--primary-dark); /* Use global color */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; /* Use global animation */
-}
-
-.contact-form {
-  max-width: 640px; /* Equivalent to max-w-lg */
+  max-width: 800px;
   margin: 0 auto;
-  background-color: var(--accent); /* Use global accent color */
-  padding: 2rem; /* Equivalent to p-8 */
-  border-radius: 8px; /* Equivalent to rounded-lg */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Equivalent to shadow-lg */
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
+/* Contact Form */
+.contact-form {
+  max-width: 700px; /* Increased width */
+  margin: 0 auto;
+  background-color: #b4c8a7; /* Darker earthy green */
+  padding: 3rem; /* Increased padding */
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increased spacing between fields */
+}
+
+/* Form Groups */
 .form-group {
-  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content */
+  text-align: left;
 }
 
 .form-label {
-  display: block;
-  font-weight: bold; /* Equivalent to font-bold */
-  margin-bottom: 0.5rem; /* Equivalent to mb-2 */
-  color: var(--text-dark); /* Use global dark text color */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
 }
 
 .form-input,
 .form-textarea {
-  width: 100%; /* Equivalent to w-full */
-  padding: 0.75rem; /* Equivalent to px-3 py-2 */
-  font-size: 1rem; /* Equivalent to text-lg */
-  color: var(--text-dark); /* Use global dark text color */
-  background-color: var(--primary-light); /* Use global light blue background */
-  border: 1px solid var(--primary); /* Use global primary color */
-  border-radius: 8px; /* Rounded corners */
+  width: 100%; /* Full width */
+  max-width: 600px; /* Limit width for better alignment */
+  margin: 0 auto; /* Center the fields */
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: var(--primary-light);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
   outline: none;
-  transition: border-color 0.3s ease-in-out; /* Smooth focus transition */
+  transition: border-color 0.3s ease-in-out;
 }
 
 .form-input:focus,
 .form-textarea:focus {
-  border-color: var(--primary-dark); /* Use global dark primary color on focus */
+  border-color: var(--primary-dark);
 }
 
 .form-textarea {
   resize: none;
 }
 
+/* Form Actions */
 .form-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
 
 .form-button {
-  background-color: var(--accent); /* Use global accent color */
-  color: var(--text-dark); /* Use global dark text color */
-  font-weight: bold; /* Bold text */
-  padding: 0.75rem 1.5rem; /* Equivalent to py-3 px-6 */
-  border-radius: 8px; /* Rounded corners */
+  background-color: var(--accent); /* Warm orange */
+  color: var(--text-light);
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .form-button:hover {
-  background-color: rgba(227, 142, 73, 0.8); /* Slightly lighter orange */
-  transform: scale(1.05); /* Hover effect */
+  background-color: rgba(227, 142, 73, 0.8);
+  transform: scale(1.05);
 }
 
+/* Success/Error Message */
 .submit-message {
+  margin-top: 1rem;
   font-size: 1rem;
-  font-weight: 600; /* Equivalent to font-semibold */
-  color: var(--primary-dark); /* Use global dark text color */
+  font-weight: bold;
+  color: var(--primary-dark);
+  text-align: center;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-dark);
+  }
 }

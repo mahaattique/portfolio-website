@@ -96,7 +96,7 @@ export default function Projects() {
         {/* Section Title */}
         <h2 className="projects-title">My Projects</h2>
         <p className="projects-subtitle">
-          Discover some of the work I've done over the years.
+          Heres some of my work 👩🏽‍🔬: 
         </p>
 
         {/* Projects Carousel */}

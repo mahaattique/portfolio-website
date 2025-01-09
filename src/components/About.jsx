@@ -30,29 +30,26 @@ export default function About() {
 
   const bubbles = [
     {
-      title: 'Web Development',
-      detail: 'I specialize in building responsive, user-friendly websites.',
+      title: 'Software Development 👩🏽‍💻',
+      detail: 'I specialize in building user-friendly websites and android apps.',
     },
     {
-      title: 'Design Principles',
-      detail: 'I value intuitive and aesthetic designs.',
+      title: 'Machine Learning & AI 🤖',
+      detail: 'Turning data and algorithms into intelligent systems to predict the future',
     },
     {
-      title: 'Problem Solving',
-      detail: 'I enjoy tackling challenging problems with innovative solutions.',
+      title: 'Sustainable, Equitable Tech 🌳',
+      detail: 'Creating tech solutions that are kind to the people and the planet',
     },
-    {
-      title: 'Collaboration',
-      detail: 'I excel in team settings to achieve goals effectively.',
-    },
+    
   ];
 
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <h2 className="about-heading">About Me</h2>
+        <h2 className="about-heading">Get to know me :) </h2>
         <p className="about-subtitle">
-          Passionate about building impactful projects and creating intuitive solutions.
+          I enjoy building things, especially if I can learn something new in the process!! 
         </p>
         <div className="mind-map">
           {bubbles.map((bubble, index) => (

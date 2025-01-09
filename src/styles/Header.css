@@ -3,37 +3,34 @@
   position: sticky;
   top: 0;
   right: 0;
-  width: auto; /* Only take up as much width as necessary */
-  height: 100%; /* Full height for vertical alignment */
+  width: auto;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   z-index: 10;
-  background-color: transparent; /* Transparent background */
+  background-color: transparent;
 }
 
 .header-container {
   display: flex;
-  flex-direction: column; /* Vertical alignment */
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
-  position: fixed; /* Keep it fixed on the screen */
-  top: 50%; /* Center the nav vertically */
-  right: 10px; /* Adjust this value to control distance from the edge */
-  transform: translateY(-50%); /* Center properly */
-  background-color: var(--text-dark); /* Dark background for visibility */
-  padding: 16px;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for elevation */
+  gap: 12px; /* Reduce gap for compact appearance */
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: transparent;
 }
 
 .nav-list {
   display: flex;
-  flex-direction: column; /* Stack the nav items vertically */
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 12px; /* Space between each nav item */
+  gap: 8px; /* Reduce space between tabs */
 }
 
 .nav-item {
@@ -41,14 +38,28 @@
 }
 
 .nav-link {
-  color: var(--primary-light); /* Light text color */
+  color: var(--primary-light);
   text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px; /* Add some rounding to make the buttons look nice */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  justify-content: center; /* Center the text inside the tabs */
+  width: 120px; /* Fixed width for equal-sized tabs */
+  height: 40px; /* Fixed height for equal-sized tabs */
+  padding: 8px 12px; /*Smaller padding for smaller tabs*/
+  background-color: var(--primary-dark);
+  border-radius: 4px; /* Simple rectangle with slightly rounded corners */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
 .nav-link:hover {
-  background-color: var(--accent); /* Highlight on hover */
-  color: var(--text-dark); /* Contrast text color on hover */
+  background-color: var(--accent);
+  color: var(--text-light);
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+.nav-item.active-tab .nav-link {
+  background-color: var(--accent); /* Highlight active tab */
+  color: var(--text-light);
+  font-weight: bold;
 }

@@ -18,11 +18,11 @@ export default function Hero() {
         </div> */}
 
         {/* Hero Title */}
-        <h2 className="hero-title">Hello, I'm Maha!</h2>
+        <h2 className="hero-title">Hi! I'm Maha 👋🏾</h2>
 
         {/* Subtitle */}
         <div className="hero-box">
-          <p className="hero-subtitle">A Professional Developer</p>
+          <p className="hero-subtitle">And I'm a developer!</p>
         </div>
 
         {/* Social Links */}

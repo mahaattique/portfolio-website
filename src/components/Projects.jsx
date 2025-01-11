@@ -22,7 +22,7 @@ const projects = [
       'Leverage Transformer-based models like BERT for improved sentiment and emotion detection.',
       'Explore ensemble methods for classifier effectiveness and incorporate pre-made emotion lexicons for deeper analysis.',
     ],
-    image: 'portfolio-website/public/images/sentiment_analysis.png',
+    image: '/images/sentiment_analysis.png',
     link: 'https://github.com/mahaattique/Movie-Data-Analytics---CS360',
   },
   {
@@ -43,12 +43,12 @@ const projects = [
       'Incorporate additional acoustic features to refine genre classification accuracy.',
       'Develop deep learning models for end-to-end audio feature extraction and genre classification.',
     ],
-    image: 'portfolio-website/public/images/musics_genre.png',
+    image: '/images/musics_genre.png',
     link: 'https://github.com/mahaattique/MusicDataAnalysis',
   },
   {
     title: 'Common Room Reservation App',
-    image: '/portfolio-website/public/images/application.png', // Replace with your image path
+    image: '/images/application.png', // Replace with your image path
     technologies: ['Java', 'Android Studio', 'Node.js', 'MongoDB'],
     frameworks: ['Express.js', 'REST API'],
     explanation:

@@ -1,28 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import '../styles/Hero.css';
-// import WaveIcon from '../assets/wave-icon.svg'; // Add your neutral-toned wave SVG
 
 export default function Hero() {
+  const [showToast, setShowToast] = useState(false);
+
   return (
     <section className="hero">
       <div className="hero-container">
-        {/* Waving Hand */}
-        {/* <div className="waving-hand">
-          <img
-            src={WaveIcon}
-            alt="Waving hand"
-            className="wave-icon"
-            aria-hidden="true"
-          />
-        </div> */}
-
         {/* Hero Title */}
         <h2 className="hero-title">Hi! I'm Maha 👋🏾</h2>
 
-        {/* Subtitle */}
-        <div className="hero-box">
-          <p className="hero-subtitle">And I'm a developer!</p>
+        {/* Role Pill Box */}
+        <div className="hero-roles">
+          <div className="role role-software">Software Developer</div>
+          <div className="role role-analyst">Data Analyst</div>
+          <div
+            className="role role-ai"
+            onMouseEnter={() => setShowToast(true)}
+            onMouseLeave={() => setShowToast(false)}
+          >
+            ML/AI Researcher
+            {showToast && (
+              <div className="toast">
+                <p>
+                  NSF Research Fellow for the {' '}
+                  <a href="https://fodsi.us/" target="_blank" rel="noopener noreferrer">
+                    Foundations Of Data Science Institute!
+                  </a>
+                </p>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Social Links */}

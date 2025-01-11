@@ -35,11 +35,11 @@ export default function About() {
     },
     {
       title: 'Machine Learning & AI 🤖',
-      detail: 'Turning data and algorithms into intelligent systems to predict the future',
+      detail: 'Researching how data and algorithms can predict the future.',
     },
     {
       title: 'Sustainable, Equitable Tech 🌳',
-      detail: 'Creating tech solutions that are kind to the people and the planet',
+      detail: 'Creating tech solutions that are kind to the people and the planet.',
     },
     
   ];

@@ -51,6 +51,77 @@
   }
 }
 
+.hero-roles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Spacing between roles */
+  margin-bottom: 2rem; /* Spacing below the roles section */
+}
+
+
+/* General Role Styles */
+.role {
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  border-radius: 20px;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Toast for ML/AI Researcher */
+.role-ai:hover {
+  position: relative;
+}
+
+.toast {
+  position: absolute;
+  top: 100%; /* Position it closer to the pill */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px; /* Reduce the width */
+  background-color: #ffffff;
+  padding: 15px; /* Add padding for better spacing */
+  border-radius: 10px; /* Keep the rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 0.80rem; /* Adjust font size */
+  color: var(--text-dark);
+  z-index: 10;
+}
+
+.toast p {
+  margin: 0;
+  word-wrap: break-word; /* Ensure long words wrap properly */
+}
+
+.toast a {
+  color: var(--accent); /* Change this to the desired color, e.g., orange or a theme-specific color */
+  font-weight: bold;
+  text-decoration: underline; /* Always underline the link */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.toast a:hover {
+  color: var(--primary-dark); /* Change to a darker or contrasting color on hover */
+  text-decoration: underline; /* Ensure underline persists on hover */
+}
+
+/* Individual Role Colors */
+.role-software {
+  background-color: #d5f5e3; /* Earthy green */
+}
+
+.role-analyst {
+  background-color: #f5c6c6; /* Sandy beige */
+}
+
+.role-ai {
+  background-color: #c6e2f5; /* Light peach */
+}
 .hero-box {
   background-color: #ede8d9; /* Slightly darker than the background */
   padding: 20px;

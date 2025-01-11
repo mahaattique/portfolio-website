@@ -103,6 +103,10 @@
   object-fit: cover;
 }
 
+.project-content,
+.project-details {
+  font-weight: 600; /* Slightly thicker than normal text (default is 400) */
+}
 .project-content {
   padding: 2rem; /* Increased padding for larger cards */
 }
@@ -114,9 +118,26 @@
   margin-bottom: 0.5rem;
 }
 
+/* Project Description */
 .project-description {
-  font-size: 1.2rem; /* Increased font size */
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: var(--primary-dark);
+  font-weight: 550; /* Thicker text */
   margin-bottom: 1.5rem;
+}
+
+/* Details Section */
+.project-details p {
+  font-size: 1.1rem; /* Slightly larger font for details */
+  color: var(--primary-dark);
+  font-weight: 550; /* Thicker text */
+  line-height: 1.6;
+}
+
+.project-details ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  font-weight: 550; /* Thicker text for list items */
   color: var(--primary-dark);
 }
 
@@ -177,4 +198,14 @@
 
 .dot.active {
   background-color: var(--primary-dark);
+}
+.project-details {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--primary-dark);
+  line-height: 1.5;
+}
+
+.project-details p {
+  margin-bottom: 1rem;
 }

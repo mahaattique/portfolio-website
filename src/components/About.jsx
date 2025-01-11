@@ -35,7 +35,7 @@ export default function About() {
     },
     {
       title: 'Machine Learning & AI 🤖',
-      detail: 'Researching how data and algorithms can predict the future.',
+      detail: 'Researching how data and algorithms can be used to predict the future.',
     },
     {
       title: 'Sustainable, Equitable Tech 🌳',

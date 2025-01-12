@@ -1,21 +1,20 @@
 /* Skills Section */
 .skills-section {
   background-color: var(--primary-light); /* Light beige background */
-  padding: 5rem 0; /* Section padding */
-  animation: fadeIn 1s ease-out; /* Fade-in animation */
+  padding: 5rem 0;
+  animation: fadeIn 1s ease-out;
 }
 
 .skills-container {
-  max-width: 768px; /* Center-aligned */
+  max-width: 768px;
   margin: 0 auto;
-  padding: 0 1rem; /* Horizontal padding */
+  padding: 0 1rem;
 }
 
-/* Typing Title */
 .skills-title {
-  font-size: 3rem; /* Large text */
-  font-weight: bold; /* Bold */
-  margin-bottom: 1rem; /* Space below title */
+  font-size: 3rem; /* Large heading */
+  font-weight: bold;
+  margin-bottom: 1rem;
   overflow: hidden;
   border-right: 0.15em solid var(--text-dark); /* Typing cursor effect */
   white-space: nowrap;
@@ -28,61 +27,52 @@
 
 .skills-subtitle {
   text-align: center;
-  font-size: 1.2rem; /* Smaller text for subtitle */
+  font-size: 1.2rem;
   margin-bottom: 3rem;
-  color: var(--primary-dark); /* Darker text */
+  color: var(--primary-dark);
   animation: fadeIn 1.5s ease-out;
 }
 
-/* Skills List */
-.skills-list {
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns */
+  gap: 30px; /* Increased spacing between items */
+}
+
+.skill-box {
   display: flex;
-  flex-direction: column;
-  gap: 2rem; /* Space between skill items */
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF  ; /* Slightly darker than the background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Increased padding for larger boxes */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.skill-item {
-  background-color: #ede8d9; /* Slightly darker background for box */
-  padding: 1rem;
-  border-radius: 0.5rem; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+.skill-box:hover {
+  transform: scale(1.1); /* Larger zoom effect on hover */
 }
 
-.skill-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+.skill-icon {
+  width: 120px; /* Larger icon width */
+  height: 120px; /* Larger icon height */
 }
 
-.skill-name {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--text-dark); /* Darker text */
+/* Adjust for responsiveness */
+@media screen and (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    gap: 20px;
+  }
+
+  .skill-icon {
+    width: 90px; /* Slightly smaller icons for smaller screens */
+    height: 90px;
+  }
 }
 
-.skill-level {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--primary); /* Medium blue */
-}
 
-.skill-bar-background {
-  width: 100%;
-  height: 0.625rem; /* Bar height */
-  background-color: var(--accent); /* Orange background for bar */
-  border-radius: 0.5rem;
-  border: none; /* Remove additional border to match original colors */
-  overflow: hidden;
-}
-
-.skill-bar {
-  height: 100%;
-  background-color: var(--primary); /* Medium blue foreground */
-  border-radius: 0.5rem;
-  transition: width 0.5s ease-out; /* Smooth width transition */
-}
-
-/* Typing animation */
 @keyframes typing {
   from {
     width: 0;
@@ -102,7 +92,6 @@
   }
 }
 
-/* Fade-in effect for subtitle */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -113,3 +102,5 @@
     transform: translateY(0);
   }
 }
+
+

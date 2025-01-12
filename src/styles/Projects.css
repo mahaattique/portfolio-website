@@ -81,7 +81,7 @@
 }
 
 .project-card {
-  background-color: #7c9d8e; /* Earthy green */
+  background-color: #d7bde2 ; /* Earthy green */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -99,8 +99,8 @@
 
 .project-image {
   width: 100%;
-  height: 300px; /* Increased height */
-  object-fit: cover;
+  height: auto;
+  object-fit: cover; /* Ensures the image fits within its container */
 }
 
 .project-content,
@@ -208,4 +208,28 @@
 
 .project-details p {
   margin-bottom: 1rem;
+}
+.projects-legend {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background: var(--primary-light);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projects-legend p {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.projects-legend span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 3px;
 }

@@ -22,7 +22,7 @@ const projects = [
       'Leverage Transformer-based models like BERT for improved sentiment and emotion detection.',
       'Explore ensemble methods for classifier effectiveness and incorporate pre-made emotion lexicons for deeper analysis.',
     ],
-    image: '/images/sentiment_analysis.png',
+    image: 'portfolio-website/public/images/sentiment_analysis.png',
     link: 'https://github.com/mahaattique/Movie-Data-Analytics---CS360',
   },
   {
@@ -43,12 +43,12 @@ const projects = [
       'Incorporate additional acoustic features to refine genre classification accuracy.',
       'Develop deep learning models for end-to-end audio feature extraction and genre classification.',
     ],
-    image: '/images/musics_genre.png',
+    image: 'portfolio-website/public/images/musics_genre.png',
     link: 'https://github.com/mahaattique/MusicDataAnalysis',
   },
   {
     title: 'Common Room Reservation App',
-    image: '/images/application.png', // Replace with your image path
+    image: '/portfolio-website/public/images/application.png', // Replace with your image path
     technologies: ['Java', 'Android Studio', 'Node.js', 'MongoDB'],
     frameworks: ['Express.js', 'REST API'],
     explanation:
@@ -61,8 +61,32 @@ const projects = [
       'Introduce real-time notifications for reservations and cancellations.',
       'Enhance the application with AI-based suggestions for optimal room usage.',
     ],
-    color: '#A5A58D', // Muted olive
+     // Muted olive
     link: 'https://github.com/mahaattique/SWEProject-Android',
+  },
+  {
+    title: 'Human-Centered Design - Accessible Web Redesign',
+    image: '/images/design_journal.png', // Ensure you upload the image to public/images
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    frameworks: ['Google Sites', 'Responsive Web Design Principles'],
+    explanation: `
+      This ongoing project focuses on reimagining web accessibility and usability by redesigning 
+      outdated, non-intuitive interfaces. The goal is to create a user-friendly experience 
+      that prioritizes inclusivity, particularly for individuals using assistive technologies. 
+      The process involves iterative prototyping, user testing, and refining layouts to ensure 
+      a responsive and accessible web design.
+    `,
+    results: [
+      'Redesigned initial layouts to simplify navigation and improve structure.',
+      'Improved content hierarchy to enhance readability and user flow.',
+      'Conducted preliminary tests with screen readers to identify usability issues.',
+    ],
+    future: [
+      'Complete accessibility audits and refine designs based on user feedback.',
+      'Implement dynamic elements to improve interactivity.',
+      'Expand features to support multilingual content and personalized experiences.',
+    ],
+    link: 'https://sites.google.com/view/design-journal-mattique/home?authuser=0',
   },
 ];
 
@@ -103,11 +127,11 @@ export default function Projects() {
             className={`project-card ${expanded ? 'expanded' : ''}`}
             style={{ backgroundColor: currentProject.color }}
           >
-            <img
+            {/* <img
               src={currentProject.image}
               alt={currentProject.title}
               className="project-image"
-            />
+            /> */}
             <div className="project-content">
               <h3 className="project-title">{currentProject.title}</h3>
               {expanded ? (

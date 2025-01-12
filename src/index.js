@@ -8,6 +8,9 @@ import './styles/global.css';
 const container = document.getElementById('root'); // Make sure 'root' exists in your index.html
 const root = createRoot(container); // Use createRoot API
 
+
+
+
 root.render(
   <React.StrictMode>
     <App />

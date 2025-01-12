@@ -65,7 +65,7 @@ export default function Hero() {
           <a href="#projects" className="btn" aria-label="View my work">
             View My Work
           </a>
-          <a
+          {/* <a
             href="path-to-your-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -73,7 +73,7 @@ export default function Hero() {
             aria-label="View my resume"
           >
             View My Resume
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
